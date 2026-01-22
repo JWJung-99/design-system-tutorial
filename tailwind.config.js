@@ -22,6 +22,9 @@ export default {
 			positive: '#2E8B57',
 			background: 'rgba(79, 79, 79, 0.3)',
 		},
+		fontFamily: {
+			body: ['Inter'],
+		},
 		fontSize: {
 			titleBase: [
 				'1.6rem',
