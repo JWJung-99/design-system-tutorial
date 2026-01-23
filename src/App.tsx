@@ -1,35 +1,46 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import Label from './components/Label/Label';
+import DefaultTextField from './components/TextField/DefaultTextField';
+import { Button } from './components/Button/Button';
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [isError, setIsError] = useState(false);
 
 	return (
 		<>
+			<Button label="Toggle Error" onClick={() => setIsError(!isError)} />
 			<div>
-				<a href="https://vite.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
+				<Label htmlFor="first name" type="required">
+					First Name
+				</Label>
+				<DefaultTextField
+					id="name"
+					placeholder="Enter your first name"
+					onChange={() => {}}
+					value=""
+					iconPath="/icons/clear-icon.svg"
+					iconAlt="clear"
+					onIconClick={() => {}}
+					errorMessage="Please check your first name."
+					isError={isError}
+				/>
 			</div>
-			<h1 className="text-primaryDark text-titleXlarge underline">
-				Vite + React
-			</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
+			<div>
+				<Label htmlFor="name" type="required">
+					Last Name
+				</Label>
+				<DefaultTextField
+					id="name"
+					placeholder="Enter your last name"
+					onChange={() => {}}
+					value=""
+					iconPath="/icons/clear-icon.svg"
+					iconAlt="clear"
+					onIconClick={() => {}}
+					errorMessage="Please check your last name."
+					isError={isError}
+				/>
 			</div>
-			<p className="read-the-docs text-bodyBase font-semibold">
-				Click on the Vite and React logos to learn more
-			</p>
 		</>
 	);
 }

@@ -104,6 +104,23 @@ export default {
 				},
 			],
 		},
+		spacing: {
+			xs: '0.4rem',
+			sm: '0.8rem',
+			md: '1.6rem',
+			lg: '2.4rem',
+			xl: '3.2rem',
+			'2xl': '4.8rem',
+			'3xl': '6.4rem',
+		},
+		borderRadius: {
+			sm: '4px',
+			md: '8px',
+			lg: '16px',
+			xl: '32px',
+			'2xl': '64px',
+			'3xl': '128px',
+		},
 	},
 	plugins: [],
 };

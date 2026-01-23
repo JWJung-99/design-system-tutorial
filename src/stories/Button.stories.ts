@@ -5,7 +5,7 @@ import { fn } from 'storybook/test';
 import { Button } from '../components/Button/Button';
 
 const meta = {
-	title: 'Basic/Button', // 경로
+	title: 'Buttons/Button', // 경로
 	component: Button, // 컴포넌트
 	parameters: {
 		layout: 'centered',
@@ -15,7 +15,7 @@ const meta = {
 	argTypes: {
 		backgroundColor: { control: 'color', description: '버튼의 배경 색상' }, // description으로 설명 작성, ButtonProps의 주석 이용하지 말 것!
 	},
-	args: { onClick: fn() },
+	args: { onClick: fn() }, // 이벤트 핸들러가 필요하다면 다음과 같이 마킹
 } satisfies Meta<typeof Button>;
 
 export default meta;
