@@ -8,9 +8,9 @@ const IconButton = ({ iconPath, alt, onClick }: IIconButtonProps) => {
 	return (
 		<button
 			onClick={onClick}
-			className="w-[2.4rem] h-[2.4rem] flex justify-center items-center ml-auto"
+			className="w-full h-full aspect-square flex justify-center items-center px-xs py-sm box-border"
 		>
-			<img src={iconPath} alt={alt} className="w-[1.6rem] h-[1.6rem]" />
+			<img src={iconPath} alt={alt} />
 		</button>
 	);
 };

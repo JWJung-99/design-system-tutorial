@@ -51,7 +51,13 @@ const DefaultTextField = ({
 					className="outline-none text-bodyBase placeholder:text-base500"
 				/>
 				{!!value ? (
-					<IconButton iconPath={iconPath} alt={iconAlt} onClick={onIconClick} />
+					<div className="ml-auto">
+						<IconButton
+							iconPath={iconPath}
+							alt={iconAlt}
+							onClick={onIconClick}
+						/>
+					</div>
 				) : (
 					<div className="w-[2.4rem] h-[2.4rem] flex justify-center items-center ml-auto" />
 				)}
