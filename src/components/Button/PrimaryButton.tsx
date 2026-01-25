@@ -7,7 +7,7 @@ export interface IPrimaryButtonProps {
 	isDisabled: boolean;
 }
 
-const dark = 'bg-primaryDark text-primaryDark';
+const dark = 'bg-primaryDark text-white';
 const light = 'bg-base100 text-primaryDark';
 const outlined =
 	'bg-transparent text-primaryDark shadow-[inset_0_0_0_1px_var(--color-primary-dark)]';
