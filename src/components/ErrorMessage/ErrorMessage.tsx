@@ -3,7 +3,7 @@ export interface IErrorMessageProps {
 }
 
 const ErrorMessage = ({ children }: IErrorMessageProps) => {
-	return <p className="text-alert text-bodyXsmall">{children}</p>;
+	return <p className="text-alert text-bodyXsmall font-semibold">{children}</p>;
 };
 
 export default ErrorMessage;

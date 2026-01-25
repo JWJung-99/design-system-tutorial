@@ -17,7 +17,7 @@ export default {
 			base700: '#4F4F4F',
 			base900: '#1A1A1A',
 			black: '#000000',
-			alert: '#D64545',
+			alert: '#B42318',
 			caution: '#E0A800',
 			positive: '#2E8B57',
 			background: 'rgba(79, 79, 79, 0.3)',
