@@ -6,3 +6,9 @@
 	font-family: 'Inter';
 	font-size: 10px;
 }
+
+@layer components {
+	.text-field > p {
+		@apply absolute;
+	}
+}

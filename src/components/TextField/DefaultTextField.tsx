@@ -28,7 +28,7 @@ const DefaultTextField = ({
 	const [isFocused, setIsFocused] = useState(false);
 
 	return (
-		<>
+		<div className="relative text-field mb-lg">
 			<div
 				onFocus={() => setIsFocused(true)}
 				onBlur={() => setIsFocused(false)}
@@ -57,7 +57,7 @@ const DefaultTextField = ({
 				)}
 			</div>
 			{isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
-		</>
+		</div>
 	);
 };
 
