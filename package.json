@@ -1,11 +1,29 @@
 {
-	"name": "design-system-tutorial",
-	"private": true,
-	"version": "0.0.0",
+	"name": "jinwook-jung-design-system-tutorial",
+	"description": "A design system tutorial for Jinwook Jung",
+	"private": false,
+	"version": "1.0.0",
 	"type": "module",
+	"files": [
+		"/dist"
+	],
+	"main": "dist/index.umd.js",
+	"module": "dist/index.es.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.umd.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./styles": "./dist/index.css"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc -b && vite build",
+		"build": "vite build && tsc -p tsconfig.build.json",
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"storybook": "storybook dev -p 6006",
@@ -47,6 +65,8 @@
 		"typescript": "~5.9.3",
 		"typescript-eslint": "^8.46.4",
 		"vite": "^7.2.4",
+		"vite-plugin-dts": "^4.5.4",
+		"vite-plugin-static-copy": "^3.1.6",
 		"vitest": "^4.0.17"
 	}
 }
