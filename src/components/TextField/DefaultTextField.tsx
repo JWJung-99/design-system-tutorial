@@ -3,6 +3,7 @@ import IconButton from '../Button/IconButton';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 export interface IDefaultTextFieldProps {
+	type: 'text' | 'email' | 'password' | 'number';
 	id: string;
 	placeholder: string;
 	onChange: React.ChangeEventHandler<HTMLInputElement>;
@@ -15,6 +16,7 @@ export interface IDefaultTextFieldProps {
 }
 
 const DefaultTextField = ({
+	type,
 	id,
 	placeholder,
 	onChange,
@@ -43,15 +45,16 @@ const DefaultTextField = ({
 				`}
 			>
 				<input
+					data-testid={id}
 					id={id}
-					type="text"
+					type={type}
 					placeholder={placeholder}
 					onChange={onChange}
 					value={value}
 					className="outline-none text-bodyBase placeholder:text-base500"
 				/>
 				{!!value ? (
-					<div className="ml-auto">
+					<div className="w-[2.4rem] h-[2.4rem] flex justify-center items-center ml-auto">
 						<IconButton
 							iconPath={iconPath}
 							alt={iconAlt}

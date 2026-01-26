@@ -13,6 +13,11 @@ const meta = {
 	tags: ['autodocs'],
 	// DefaultTextFieldProps의 내용
 	argTypes: {
+		type: {
+			control: 'select',
+			options: ['text', 'email', 'password', 'number'],
+			description: '입력 필드의 타입',
+		},
 		id: { control: 'text', description: '입력 필드의 고유 ID' },
 		placeholder: { control: 'text', description: '입력 필드의 placeholder' },
 		onChange: {
@@ -37,6 +42,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
 	args: {
+		type: 'text',
 		id: 'name',
 		placeholder: 'Enter Name',
 		value: '',

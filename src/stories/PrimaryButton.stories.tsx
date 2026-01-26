@@ -20,6 +20,11 @@ const meta = {
 	],
 	// ButtonProps의 내용
 	argTypes: {
+		type: {
+			control: 'select',
+			options: ['button', 'submit'],
+			description: '버튼의 타입 설정',
+		},
 		theme: {
 			control: {
 				type: 'select',
@@ -39,6 +44,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Dark: Story = {
 	args: {
+		type: 'button',
 		theme: 'dark',
 		children: 'Button',
 		isDisabled: false,
@@ -47,6 +53,7 @@ export const Dark: Story = {
 
 export const Light: Story = {
 	args: {
+		type: 'button',
 		theme: 'light',
 		children: 'Button',
 		isDisabled: false,
@@ -55,6 +62,7 @@ export const Light: Story = {
 
 export const Outlined: Story = {
 	args: {
+		type: 'button',
 		theme: 'outlined',
 		children: 'Button',
 		isDisabled: false,
@@ -63,6 +71,7 @@ export const Outlined: Story = {
 
 export const Text: Story = {
 	args: {
+		type: 'button',
 		theme: 'text',
 		children: 'Button',
 		isDisabled: false,
@@ -71,6 +80,7 @@ export const Text: Story = {
 
 export const Disabled: Story = {
 	args: {
+		type: 'button',
 		theme: 'dark',
 		children: 'Button',
 		isDisabled: true,

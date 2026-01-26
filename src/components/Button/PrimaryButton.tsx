@@ -1,6 +1,7 @@
 type PrimaryButtonTheme = 'dark' | 'light' | 'outlined' | 'text';
 
 export interface IPrimaryButtonProps {
+	type: 'button' | 'submit';
 	theme: PrimaryButtonTheme;
 	children: string;
 	onClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -24,6 +25,7 @@ const color: Record<PrimaryButtonTheme, string> = {
 };
 
 const PrimaryButton = ({
+	type,
 	theme,
 	children,
 	onClick,
@@ -31,6 +33,7 @@ const PrimaryButton = ({
 }: IPrimaryButtonProps) => {
 	return (
 		<button
+			type={type}
 			className={`w-full px-md py-sm rounded-sm ${color[theme]} ${disabled} ${theme === 'text' && 'group'}`}
 			onClick={onClick}
 			disabled={isDisabled}
